@@ -1,0 +1,19 @@
+{
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "A solution for managing a company's employees using node, inquirer, and MySQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javayaga/Employee-Tracker.git"
+  },
+  "author": "Alice Russell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/javayaga/Employee-Tracker/issues"
+  },
+  "homepage": "https://github.com/javayaga/Employee-Tracker#readme"
+}
