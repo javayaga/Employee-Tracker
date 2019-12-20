@@ -1,0 +1,28 @@
+
+db: employees_db
+    table: employees
+        columns: 
+            1. department
+            2. role
+            3. employee
+
+
+pacakges needed: 
+    1. mysql
+    2. inquirer
+    3. console.table
+
+
+server outline
+    - require dependencies 
+    - create connection to db
+    - connect connection 
+    - inquirer prompt: "what would you like to do?"
+        query to db for: 
+        - view all employees    
+        - view all employees by department 
+        - view all employees by manager 
+        - add employee
+        - remove employee
+        - update employee role 
+        - update employee manager 
