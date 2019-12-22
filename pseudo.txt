@@ -26,3 +26,8 @@ server outline
         - remove employee
         - update employee role 
         - update employee manager 
+
+
+inquirer prompts: 
+    What would you like to do?
+   

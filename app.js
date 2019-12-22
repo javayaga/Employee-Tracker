@@ -1,6 +1,7 @@
 // dependencies 
 const inquirer = require("inquirer");
 const mysql = require("mysql");
+const cTable = require("console.table");
 
 // create connection to database
 const connection = mysql.createConnection({
@@ -22,3 +23,31 @@ connection.connect((err) => {
     // close connection
     connection.end();
 });
+
+function runApp() {
+    function initialPrompt() {
+        inquirer.prompt([
+            {
+                type: "list",
+                name: "userAnswer",
+                message: "What would you like to do?",
+                choices: [
+                    "View All Employess",
+                    "View All Employees by Department",
+                    "View All Empoyee By Manager",
+                    "Add Employee",
+                    "Remove Employee",
+                    "Update Employee Role",
+                    "Updaye Employee Manager"
+                ]
+            }])
+            .then(userAnswer => {
+                console.log(userAnswer);  
+            })
+    }
+
+    initialPrompt();
+};
+
+runApp();
+
