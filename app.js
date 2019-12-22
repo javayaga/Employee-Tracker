@@ -19,13 +19,10 @@ connection.connect((err) => {
     }
 
     console.log("Database is connected!");
-
-    // close connection
-    connection.end();
+    runApp();
 });
 
 function runApp() {
-    function initialPrompt() {
         inquirer.prompt([
             {
                 type: "list",
@@ -41,13 +38,19 @@ function runApp() {
                     "Updaye Employee Manager"
                 ]
             }])
-            .then(userAnswer => {
-                console.log(userAnswer);  
+            .then(answer => {
+                console.log(answer.userAnswer);  
+                if (answer.userAnswer === "View All Employess") {
+                    runAllEmployees();
+                }
             })
-    }
-
-    initialPrompt();
 };
 
-runApp();
+function runAllEmployees() {
+    connection.query("SELECT * FROM employees_db.employees", function(err, results) {
+        if (err) throw err;
+        
+        console.table(results);
+    });
+};
 
