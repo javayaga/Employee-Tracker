@@ -1,2 +1,2 @@
 # Employee-Tracker
-A solution for managing a company's employees using node, inquirer, and MySQL
+A solution for managing a company's employees using Node, Inquirer, and MySQL
